@@ -36,24 +36,21 @@
 
 .c-form{
 	display: flex;
-	& span{
-		display: flex;
-		border: 1px solid green;
-		& button{
-			order: 1;
-			border: 1px solid yellow;
-		}
-		& div{
-			border: 1px solid blue;
-			order: 0;
-		}
-	}
+	border: 2px solid green;
+	justify-content: center;
+}
+
+.c-boton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
 .c-footer{
 	display: flex;
-	align-items: center;
+	height: auto;
+	align-items: flex-end;
 	justify-content: center;
 	flex: 0 0 100%;
 	border: 2px solid green;

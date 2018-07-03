@@ -5,8 +5,7 @@ main.c-main
 	.c-form
 		input(type="email" name="email" placeholder="Ingresa tu correo")
 		span
-			button Notificame
-			div(class="icon-check") 	
+			button(class="icon-check") Notificame 	
 	.c-contacto
 		p(class="icon"): span contacto@quintilvalley.cl 
 		p(class="icon"): span +56 9 1234567
@@ -15,4 +14,10 @@ main.c-main
 		a(class="icon-twitter" href="https://twitter.com/ValleyQuintil" target="_blank")
 		a(class="icon-instagram" href="https://instagram.com/quintil_valley" target="_blank")
 	.c-boton
-		button#nosotros Más sobre Quintil Valley
+		button#open-modal Más sobre Quintil Valley
+	section#modal.modal
+		h1 Sobre Nosotros
+		p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia possimus accusantium, impedit est dolores fugiat, culpa ducimus aperiam minima pariatur nihil, ab ipsam temporibus quidem animi qui laborum illum atque.
+		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio repellat neque eveniet mollitia necessitatibus dignissimos quo error magni. Ab voluptatibus consequatur odit earum laborum nesciunt ipsam reiciendis inventore autem ipsum!
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias exercitationem impedit dolorum veritatis laboriosam voluptate error cupiditate? Fuga ut dolores quibusdam aperiam et accusantium mollitia maiores. Accusantium, natus impedit.
+		button#close.icon-close Cerrar
