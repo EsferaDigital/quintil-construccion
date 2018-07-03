@@ -1,0 +1,60 @@
+.c-body{
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid red;
+}
+
+.c-header{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	flex: 0 0 100%;
+	border: 2px solid blue;
+	& h1, h2{
+		flex: 0 0 100%;
+		text-align: center;
+		border: 2px solid green;
+	}
+}
+
+.c-main{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 100%;
+	border: 2px solid yellow;
+}
+
+.c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton{
+	text-align: center;
+	flex: 0 0 100%;
+	border: 2px solid red;
+}
+
+.c-form{
+	display: flex;
+	& span{
+		display: flex;
+		border: 1px solid green;
+		& button{
+			order: 1;
+			border: 1px solid yellow;
+		}
+		& div{
+			border: 1px solid blue;
+			order: 0;
+		}
+	}
+}
+
+
+.c-footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 100%;
+	border: 2px solid green;
+}
