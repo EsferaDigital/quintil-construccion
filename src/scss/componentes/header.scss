@@ -1,0 +1,35 @@
+.slider{
+	height: 2rem;
+	font-size: 2rem;
+	line-height: 2rem;
+	overflow: hidden;
+	margin-top: 1rem;
+	border: 2px solid blue;
+	& ul{
+		padding-left: 0;
+		margin: 0;
+		color: transparent;
+		animation: slider 10s infinite, color 10s infinite;
+		@keyframes slider{
+			40%{margin-top: 0;}
+			50%{margin-top: -2rem;}
+			60%{margin-top: -2rem;}	
+			70%{margin-top: -2rem;}
+			80%{margin-top: -2rem;}
+			90%{margin-top: -2rem;}
+			100%{margin-top: -2rem;}
+		}
+		@keyframes color{
+			5%{color: black;}
+			30%{color:black;}
+			40%{color: transparent;}
+			50%{color: transparent;}
+			55%{color: black;}
+			60%{color: black;}	
+			70%{color: black;}
+			80%{color: black;}
+			90%{color: black;}
+			100%{color: transparent;}		
+		}
+	}
+}

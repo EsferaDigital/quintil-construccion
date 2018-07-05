@@ -1,3 +1,18 @@
-.main{
-	background-color: whitesmoke;
+.c-time{
+	border: 2px solid green;
+	&-number{
+		font-size: 1.5rem;
+	}
+}
+
+.c-sociales{
+	& a{
+		font-size: 1.5rem;
+	}
+}
+
+.c-boton{
+	& button{
+		@include boton-ovalado;
+	}
 }

@@ -1,7 +1,8 @@
 .c-body{
 	display: flex;
-	flex-wrap: wrap;
-	border: 2px solid red;
+	height: 100vh;
+	flex-direction: column;
+	background-color: aqua;
 }
 
 .c-header{
@@ -10,12 +11,13 @@
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-	flex: 0 0 100%;
-	border: 2px solid blue;
+	flex: 1 1 100%;
+	height: 20vh;
+	// border: 2px solid blue;
 	& h1, h2{
 		flex: 0 0 100%;
 		text-align: center;
-		border: 2px solid green;
+		// border: 2px solid green;
 	}
 }
 
@@ -24,19 +26,30 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 100%;
+	flex: 1 1 100%;
+	height: auto;
 	border: 2px solid yellow;
 }
 
 .c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton{
 	text-align: center;
 	flex: 0 0 100%;
+	margin-bottom: 1rem;
+	// border: 2px solid red;
+}
+
+.c-contador{
+	display: flex;
+	flex: 0 0 80%;
+	margin: auto;
+	margin-bottom: 1rem;
+	justify-content: space-between;
 	border: 2px solid red;
 }
 
 .c-form{
 	display: flex;
-	border: 2px solid green;
+	// border: 2px solid green;
 	justify-content: center;
 }
 
@@ -52,6 +65,6 @@
 	height: auto;
 	align-items: flex-end;
 	justify-content: center;
-	flex: 0 0 100%;
+	flex: 1 1 100%;
 	border: 2px solid green;
 }

@@ -177,9 +177,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  border: 2px solid red; }
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: aqua; }
 
 .c-header {
   display: -webkit-box;
@@ -195,16 +198,15 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  border: 2px solid blue; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  height: 20vh; }
   .c-header h1, .c-header h2 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    text-align: center;
-    border: 2px solid green; }
+    text-align: center; }
 
 .c-main {
   display: -webkit-box;
@@ -218,9 +220,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  height: auto;
   border: 2px solid yellow; }
 
 .c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton {
@@ -228,13 +231,26 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  margin-bottom: 1rem; }
+
+.c-contador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: 2px solid red; }
 
 .c-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid green;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
@@ -261,28 +277,180 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   border: 2px solid green; }
 
 .modal {
   position: fixed;
-  display: none;
+  display: block;
   top: 0;
-  z-index: 1000;
   width: 100%;
   height: 100vh;
+  z-index: 1000;
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
   background-color: white;
-  opacity: 0; }
+  opacity: .9; }
+  .modal.zoom-in {
+    -webkit-animation: zoomIn .5s forwards;
+            animation: zoomIn .5s forwards; }
 
-.modal-activo {
+@-webkit-keyframes zoomIn {
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+
+@keyframes zoomIn {
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+  .modal.zoom-out {
+    -webkit-animation: zoomOut .5s forwards;
+            animation: zoomOut .5s forwards; }
+
+@-webkit-keyframes zoomOut {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  to {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0); } }
+
+@keyframes zoomOut {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  to {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0); } }
+  .modal button {
+    display: block;
+    line-height: 3;
+    background-color: #ff9f1c;
+    padding: 0 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    font-size: .8rem; }
+    .modal button:hover {
+      background-color: #ff9403; }
+    .modal button:active {
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95); }
+
+.slider {
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  border: 2px solid blue; }
+  .slider ul {
+    padding-left: 0;
+    margin: 0;
+    color: transparent;
+    -webkit-animation: slider 10s infinite, color 10s infinite;
+            animation: slider 10s infinite, color 10s infinite; }
+
+@-webkit-keyframes slider {
+  40% {
+    margin-top: 0; }
+  50% {
+    margin-top: -2rem; }
+  60% {
+    margin-top: -2rem; }
+  70% {
+    margin-top: -2rem; }
+  80% {
+    margin-top: -2rem; }
+  90% {
+    margin-top: -2rem; }
+  100% {
+    margin-top: -2rem; } }
+
+@keyframes slider {
+  40% {
+    margin-top: 0; }
+  50% {
+    margin-top: -2rem; }
+  60% {
+    margin-top: -2rem; }
+  70% {
+    margin-top: -2rem; }
+  80% {
+    margin-top: -2rem; }
+  90% {
+    margin-top: -2rem; }
+  100% {
+    margin-top: -2rem; } }
+
+@-webkit-keyframes color {
+  5% {
+    color: black; }
+  30% {
+    color: black; }
+  40% {
+    color: transparent; }
+  50% {
+    color: transparent; }
+  55% {
+    color: black; }
+  60% {
+    color: black; }
+  70% {
+    color: black; }
+  80% {
+    color: black; }
+  90% {
+    color: black; }
+  100% {
+    color: transparent; } }
+
+@keyframes color {
+  5% {
+    color: black; }
+  30% {
+    color: black; }
+  40% {
+    color: transparent; }
+  50% {
+    color: transparent; }
+  55% {
+    color: black; }
+  60% {
+    color: black; }
+  70% {
+    color: black; }
+  80% {
+    color: black; }
+  90% {
+    color: black; }
+  100% {
+    color: transparent; } }
+
+.c-time {
+  border: 2px solid green; }
+  .c-time-number {
+    font-size: 1.5rem; }
+
+.c-sociales a {
+  font-size: 1.5rem; }
+
+.c-boton button {
   display: block;
-  opacity: .9;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease; }
-
-.main {
-  background-color: whitesmoke; }
+  line-height: 3;
+  background-color: #ff9f1c;
+  padding: 0 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  font-size: .8rem; }
+  .c-boton button:hover {
+    background-color: #ff9403; }
+  .c-boton button:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
 
 /*# sourceMappingURL=styles.css.map */

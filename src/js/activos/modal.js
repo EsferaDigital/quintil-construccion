@@ -1,16 +1,14 @@
-// Capturamos los elementos
+const open = document.getElementById('open-modal')
+const modal = document.getElementById('modal')
+const close = document.getElementById('close')
 
-const open = document.getElementById('open-modal'),
-		close = document.getElementById('close'),
-		modal = document.getElementById('modal')
+open.addEventListener('click', () => {
+	console.log('boton open')
+	modal.classList.toggle('zoom-in')
+	modal.classList.remove('zoom-out')
+})
 
-function openModal(){
-	modal.classList.add('modal-activo')
-}
-
-function closeModal(){
-	modal.classList.remove('modal-activo')
-}
-
-open.addEventListener('click', openModal)
-close.addEventListener('click', closeModal)
+close.addEventListener('click', () => {
+	console.log('boton close')
+	modal.classList.replace('zoom-in', 'zoom-out')
+})
