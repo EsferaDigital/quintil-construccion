@@ -1,39 +1,52 @@
 .c-body{
 	display: flex;
 	height: 100vh;
+	position: relative;
 	flex-direction: column;
-	background-color: aqua;
+	background-repeat: no-repeat;	
+	background-image: img('valparaiso.jpg');
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right top, #00a398, #2fac67);
+		opacity: .5;
+	}
 }
 
 .c-header{
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-	flex: 1 1 100%;
-	height: 20vh;
+	flex: 1 1 45%;
 	// border: 2px solid blue;
-	& h1, h2{
-		flex: 0 0 100%;
+	& h1{
+		flex: 0 0 20%;
 		text-align: center;
-		// border: 2px solid green;
+		border: 2px solid green;
 	}
 }
 
 .c-main{
 	display: flex;
+	position: relative;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	flex: 1 1 100%;
-	height: auto;
 	border: 2px solid yellow;
 }
 
 .c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton{
+	position: relative;
 	text-align: center;
-	flex: 0 0 100%;
+	flex: 1 1 100%;
 	margin-bottom: 1rem;
 	// border: 2px solid red;
 }
@@ -62,9 +75,9 @@
 
 .c-footer{
 	display: flex;
-	height: auto;
+	position: relative;
 	align-items: flex-end;
 	justify-content: center;
-	flex: 1 1 100%;
+	flex: 1 1 10%;
 	border: 2px solid green;
 }

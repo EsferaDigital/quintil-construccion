@@ -178,13 +178,26 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: aqua; }
+  background-repeat: no-repeat;
+  background-image: url("/img/valparaiso.jpg"); }
+  .c-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left bottom, right top, from(#00a398), to(#2fac67));
+    background: linear-gradient(to right top, #00a398, #2fac67);
+    opacity: .5; }
 
 .c-header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,19 +212,20 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  height: 20vh; }
-  .c-header h1, .c-header h2 {
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%; }
+  .c-header h1 {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    text-align: center; }
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    text-align: center;
+    border: 2px solid green; }
 
 .c-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -223,14 +237,14 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  height: auto;
   border: 2px solid yellow; }
 
 .c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton {
+  position: relative;
   text-align: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   margin-bottom: 1rem; }
 
 .c-contador {
@@ -270,7 +284,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  position: relative;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -278,8 +292,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+      -ms-flex: 1 1 10%;
+          flex: 1 1 10%;
   border: 2px solid green; }
 
 .modal {
@@ -328,20 +342,24 @@ body {
   .modal button {
     display: block;
     line-height: 3;
-    background-color: #ff9f1c;
+    background-color: rgba(243, 92, 27, 0.9);
     padding: 0 1.5rem;
     color: white;
     text-transform: uppercase;
     border-radius: 1.5rem;
     font-size: .8rem; }
     .modal button:hover {
-      background-color: #ff9403; }
+      background-color: rgba(233, 78, 12, 0.9); }
     .modal button:active {
       -webkit-transform: scale(0.95);
               transform: scale(0.95); }
 
 .slider {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   height: 2rem;
+  text-align: center;
   font-size: 2rem;
   line-height: 2rem;
   overflow: hidden;
@@ -430,25 +448,36 @@ body {
   100% {
     color: transparent; } }
 
+.c-header-img {
+  display: block;
+  width: 100%;
+  border: 2px solid red; }
+
 .c-time {
   border: 2px solid green; }
   .c-time-number {
     font-size: 1.5rem; }
 
 .c-sociales a {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: white;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease; }
+  .c-sociales a:hover {
+    color: black;
+    opacity: .7; }
 
 .c-boton button {
   display: block;
   line-height: 3;
-  background-color: #ff9f1c;
+  background-color: rgba(243, 92, 27, 0.9);
   padding: 0 1.5rem;
   color: white;
   text-transform: uppercase;
   border-radius: 1.5rem;
   font-size: .8rem; }
   .c-boton button:hover {
-    background-color: #ff9403; }
+    background-color: rgba(233, 78, 12, 0.9); }
   .c-boton button:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95); }
