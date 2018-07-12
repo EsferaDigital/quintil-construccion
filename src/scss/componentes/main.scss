@@ -1,7 +1,33 @@
+.c-subtitle{
+	color: white;
+}
+
 .c-time{
-	border: 2px solid green;
+	color: white;
+	// border: 2px solid green;
 	&-number{
-		font-size: 1.5rem;
+		font-size: 1.7rem;
+	}
+	&-text{
+		font-size: 1rem;
+	}
+}
+
+.c-form{
+	& input{
+		width: 40%;
+		line-height: 2;
+		padding: 0 1rem;
+		border: transparent;
+		border-radius: 1rem 0 0 1rem;
+	}
+	& button{
+		line-height: 2;
+		padding: 0 1rem;
+		background-color: color(cta);
+		color: white;
+		border: transparent;
+		border-radius: 0 1rem 1rem 0;
 	}
 }
 
@@ -20,5 +46,26 @@
 .c-boton{
 	& button{
 		@include boton-ovalado;
+		border: transparent;
+	}
+}
+
+.modal{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	& h1{
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	& p{
+		width: 70%;
+		margin: 0 auto;
+		margin-bottom: .5rem;
+		// border: 2px solid red;
+	}
+	& button{
+		width: 10%;
+		margin: auto;
 	}
 }

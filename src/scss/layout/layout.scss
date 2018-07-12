@@ -13,7 +13,7 @@
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(to right top, #00a398, #2fac67);
-		opacity: .5;
+		opacity: .6;
 	}
 }
 
@@ -27,9 +27,9 @@
 	flex: 1 1 45%;
 	// border: 2px solid blue;
 	& h1{
-		flex: 0 0 20%;
+		flex: 0 0 35%;
 		text-align: center;
-		border: 2px solid green;
+		// border: 2px solid green;
 	}
 }
 
@@ -40,7 +40,7 @@
 	align-items: center;
 	justify-content: center;
 	flex: 1 1 100%;
-	border: 2px solid yellow;
+	// border: 2px solid yellow;
 }
 
 .c-subtitle, .c-contador, .c-form, .c-contacto, .c-sociales, .c-boton{
@@ -57,13 +57,26 @@
 	margin: auto;
 	margin-bottom: 1rem;
 	justify-content: space-between;
-	border: 2px solid red;
+	// border: 2px solid red;
+	@include mq($medium){
+		flex: 0 0 40%;
+	}
 }
 
 .c-form{
 	display: flex;
-	// border: 2px solid green;
 	justify-content: center;
+}
+
+.c-contacto{
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+	color: white;
+	& p{
+		font-size: 1.3rem;
+		margin-right: 1rem;
+	}
 }
 
 .c-boton{
@@ -79,5 +92,5 @@
 	align-items: flex-end;
 	justify-content: center;
 	flex: 1 1 10%;
-	border: 2px solid green;
+	// border: 2px solid green;
 }

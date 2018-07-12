@@ -1,0 +1,12 @@
+.c-footer{
+	color: white;
+	& p, a{
+		padding: .5rem;
+	}
+	& a{
+		color: white;
+		&:hover{
+			color: red;
+		}
+	}
+}
