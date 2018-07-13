@@ -184,6 +184,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-repeat: no-repeat;
+  background-position: center center;
   background-image: url("/img/valparaiso.jpg"); }
   .c-body::before {
     content: "";
@@ -194,7 +195,7 @@ body {
     height: 100%;
     background: -webkit-gradient(linear, left bottom, right top, from(#00a398), to(#2fac67));
     background: linear-gradient(to right top, #00a398, #2fac67);
-    opacity: .6; }
+    opacity: .7; }
 
 .c-header {
   position: relative;
@@ -216,8 +217,9 @@ body {
           flex: 1 1 45%; }
   .c-header h1 {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 35%;
-            flex: 0 0 35%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    margin-top: 1rem;
     text-align: center; }
 
 .c-main {
@@ -263,6 +265,9 @@ body {
           -ms-flex: 0 0 40%;
               flex: 0 0 40%; } }
 
+.c-subtitle {
+  padding: 0 .5rem; }
+
 .c-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,15 +280,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: justify;
-      align-content: space-between;
-  color: white; }
-  .c-contacto p {
-    font-size: 1.3rem;
-    margin-right: 1rem; }
+      align-content: space-between; }
 
 .c-boton {
   display: -webkit-box;
@@ -370,98 +373,45 @@ body {
       -webkit-transform: scale(0.95);
               transform: scale(0.95); }
 
-.slider {
+.c-slider {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  height: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 2rem;
-  overflow: hidden;
-  margin-top: 1rem; }
-  .slider ul {
-    padding-left: 0;
-    margin: 0;
-    color: transparent;
-    -webkit-animation: slider 10s infinite, color 10s infinite;
-            animation: slider 10s infinite, color 10s infinite; }
+  position: relative;
+  text-align: center; }
+  .c-slider li {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 1.3rem;
+    color: white; }
 
-@-webkit-keyframes slider {
-  40% {
-    margin-top: 0; }
-  50% {
-    margin-top: -2rem; }
-  60% {
-    margin-top: -2rem; }
-  70% {
-    margin-top: -2rem; }
-  80% {
-    margin-top: -2rem; }
-  90% {
-    margin-top: -2rem; }
-  100% {
-    margin-top: -2rem; } }
+.slider-text-1 {
+  -webkit-animation: aparece 10s infinite alternate;
+          animation: aparece 10s infinite alternate;
+  opacity: 0; }
 
-@keyframes slider {
-  40% {
-    margin-top: 0; }
-  50% {
-    margin-top: -2rem; }
-  60% {
-    margin-top: -2rem; }
-  70% {
-    margin-top: -2rem; }
-  80% {
-    margin-top: -2rem; }
-  90% {
-    margin-top: -2rem; }
-  100% {
-    margin-top: -2rem; } }
+@-webkit-keyframes aparece {
+  to {
+    opacity: 1; } }
 
-@-webkit-keyframes color {
-  5% {
-    color: white; }
-  30% {
-    color: white; }
-  40% {
-    color: transparent; }
-  50% {
-    color: transparent; }
-  55% {
-    color: white; }
-  60% {
-    color: white; }
-  70% {
-    color: white; }
-  80% {
-    color: white; }
-  90% {
-    color: white; }
-  100% {
-    color: transparent; } }
+@keyframes aparece {
+  to {
+    opacity: 1; } }
 
-@keyframes color {
-  5% {
-    color: white; }
-  30% {
-    color: white; }
-  40% {
-    color: transparent; }
-  50% {
-    color: transparent; }
-  55% {
-    color: white; }
-  60% {
-    color: white; }
-  70% {
-    color: white; }
-  80% {
-    color: white; }
-  90% {
-    color: white; }
-  100% {
-    color: transparent; } }
+.slider-text-2 {
+  -webkit-animation: desaparece 10s infinite alternate;
+          animation: desaparece 10s infinite alternate;
+  opacity: 1; }
+
+@-webkit-keyframes desaparece {
+  to {
+    opacity: 0; } }
+
+@keyframes desaparece {
+  to {
+    opacity: 0; } }
 
 .c-header-img {
   display: block;
@@ -481,20 +431,28 @@ body {
   .c-time-text {
     font-size: 1rem; }
 
-.c-form input {
-  width: 40%;
-  line-height: 2;
-  padding: 0 1rem;
-  border: transparent;
-  border-radius: 1rem 0 0 1rem; }
+.c-form {
+  padding: .5rem; }
+  .c-form input {
+    width: 60%;
+    line-height: 2;
+    padding: 0 1rem;
+    border: transparent;
+    border-radius: 1rem 0 0 1rem; }
+  .c-form button {
+    width: 40%;
+    line-height: 2;
+    padding: 0 .3rem;
+    background-color: rgba(243, 92, 27, 0.9);
+    color: white;
+    border: transparent;
+    border-radius: 0 1rem 1rem 0; }
 
-.c-form button {
-  line-height: 2;
-  padding: 0 1rem;
-  background-color: rgba(243, 92, 27, 0.9);
-  color: white;
-  border: transparent;
-  border-radius: 0 1rem 1rem 0; }
+.c-contacto {
+  color: white; }
+  .c-contacto p {
+    width: 100%;
+    font-size: 1rem; }
 
 .c-sociales a {
   font-size: 1.5rem;
