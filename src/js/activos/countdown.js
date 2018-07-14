@@ -41,4 +41,4 @@ const countdown = (deadline, elem) =>{
 	}, 1000)
 }
 
-countdown('Oct 06 2018 10:32:53 GMT-500', 'clock')
+countdown('Sept 13 2018 10:32:53 GMT-500', 'clock')

@@ -195,7 +195,7 @@ body {
     height: 100%;
     background: -webkit-gradient(linear, left bottom, right top, from(#00a398), to(#2fac67));
     background: linear-gradient(to right top, #00a398, #2fac67);
-    opacity: .7; }
+    opacity: .2; }
 
 .c-header {
   position: relative;
