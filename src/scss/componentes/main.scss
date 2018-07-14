@@ -1,5 +1,14 @@
 .c-subtitle{
 	color: white;
+	@include mq($movil1){
+		padding: 0 1rem;
+	}
+	& p{
+		font-size: 1rem;
+		@include mq($small-large){
+			font-size: 1.3rem;
+		}
+	}
 }
 
 .c-time{
@@ -7,22 +16,35 @@
 	// border: 2px solid green;
 	&-number{
 		font-size: 1.7rem;
+		@include mq($small-large){
+			font-size: 2.5rem;
+		}
 	}
 	&-text{
 		font-size: 1rem;
+		@include mq($small-large){
+			font-size: 1.3rem;
+		}
 	}
 }
 
 .c-form{
-	padding: .5rem;
+	padding: 0 .5rem;
+	@include mq($movil1){
+		padding: 0 1rem;
+	}
 	& input{
 		width: 60%;
 		line-height: 2;
 		padding: 0 1rem;
 		border: transparent;
 		border-radius: 1rem 0 0 1rem;
+		@include mq($movil1){
+			width: 65%;
+		}
 	}
 	& button{
+		@include boton-ovalado;
 		width: 40%;
 		line-height: 2;
 		padding: 0 .3rem;
@@ -30,14 +52,27 @@
 		color: white;
 		border: transparent;
 		border-radius: 0 1rem 1rem 0;
+		@include mq($movil1){
+			width: 35%;
+		}
 	}
 }
 
 .c-contacto{
 	color: white;
 	& p{
-		width: 100%;
+		flex: 0 0 100%;
 		font-size: 1rem;
+		@include mq($medium){
+			flex: 0 0 42%;
+			font-size: 1.2rem;
+			// border: 2px solid green;
+		}
+	}
+	& p:nth-child(2){
+		@include mq($medium){
+			text-align: right;
+		}
 	}
 }
 
@@ -56,7 +91,6 @@
 .c-boton{
 	& button{
 		@include boton-ovalado;
-		border: transparent;
 	}
 }
 

@@ -1,12 +1,13 @@
 .c-footer{
 	color: white;
 	& p, a{
-		padding: .5rem;
+		padding: .5rem 0;
 	}
 	& a{
+		margin-left: 3px;
 		color: white;
 		&:hover{
-			color: red;
+			color: color(cta);
 		}
 	}
 }
