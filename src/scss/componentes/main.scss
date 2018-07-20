@@ -1,10 +1,11 @@
 .c-subtitle{
-	color: white;
 	@include mq($movil1){
 		padding: 0 1rem;
 	}
 	& p{
 		font-size: 1rem;
+		letter-spacing: 2px;		
+		color: color(text);
 		@include mq($small-large){
 			font-size: 1.3rem;
 		}
@@ -12,49 +13,80 @@
 }
 
 .c-time{
-	color: white;
-	// border: 2px solid green;
+	color: color(text);
 	&-number{
 		font-size: 1.7rem;
+		letter-spacing: 2px;
 		@include mq($small-large){
 			font-size: 2.5rem;
 		}
 	}
 	&-text{
 		font-size: 1rem;
+		letter-spacing: 2px;
 		@include mq($small-large){
 			font-size: 1.3rem;
 		}
 	}
 }
 
-.c-form{
+form{
 	padding: 0 .5rem;
+	// border: 2px solid red;
 	@include mq($movil1){
 		padding: 0 1rem;
 	}
-	& input{
-		width: 60%;
-		line-height: 2;
-		padding: 0 1rem;
-		border: transparent;
-		border-radius: 1rem 0 0 1rem;
-		@include mq($movil1){
-			width: 65%;
-		}
+}
+
+input[type="text"]{
+	width: 60%;
+	line-height: 2;
+	padding: 0 1rem;
+	border: transparent;
+	letter-spacing: 2px;
+	border-radius: 1rem 0 0 1rem;
+	@include mq($movil1){
+		width: 65%;
 	}
-	& button{
-		@include boton-ovalado;
-		width: 40%;
-		line-height: 2;
-		padding: 0 .3rem;
-		background-color: color(cta);
-		color: white;
-		border: transparent;
-		border-radius: 0 1rem 1rem 0;
-		@include mq($movil1){
-			width: 35%;
-		}
+	&:focus{
+		border: color(degradado-start);
+	}
+}
+
+input[type="submit"]{
+	@include boton-ovalado;
+	width: 40%;
+	position: relative;
+	line-height: 2;
+	letter-spacing: 2px;
+	padding: 0 .2rem 0 .5rem;
+	background-color: color(cta);
+	color: white;
+	border: none;
+	border-radius: 0 1rem 1rem 0;
+	@include mq($movil1){
+		width: 35%;
+	}
+	@include mq($large){
+		text-transform: uppercase;
+	}
+}
+
+i{
+	position: absolute;
+	top: 5px;
+	color: white;
+	font-size: 1rem;
+	left: 61%;
+	z-index: 2;
+	@include mq($movil1){
+		left: 65%;
+	}
+	@include mq($small-large){
+		left: 66%;
+	}
+	@include mq($large){
+		left: 68%;
 	}
 }
 
@@ -63,6 +95,7 @@
 	& p{
 		flex: 0 0 100%;
 		font-size: 1rem;
+		letter-spacing: 2px;
 		@include mq($medium){
 			flex: 0 0 42%;
 			font-size: 1.2rem;
@@ -72,6 +105,24 @@
 	& p:nth-child(2){
 		@include mq($medium){
 			text-align: right;
+		}
+	}
+}
+
+.c-enterate{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	& p{
+		color: color(text);
+		letter-spacing: 2px;
+	}
+	& a{
+		margin-left: .5rem;
+		letter-spacing: 2px;
+		color: color(text);
+		&:hover{
+			color: color(cta);
 		}
 	}
 }
@@ -90,26 +141,20 @@
 
 .c-boton{
 	& button{
+		letter-spacing: 2px;
+		text-transform: uppercase;
 		@include boton-ovalado;
+		line-height: 2.5;
 	}
 }
 
-.modal{
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
-	& h1{
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-	& p{
-		width: 70%;
-		margin: 0 auto;
-		margin-bottom: .5rem;
-		// border: 2px solid red;
-	}
-	& button{
-		width: 10%;
-		margin: auto;
-	}
+
+
+.c-gracias h1{
+	color: black;
+}
+
+#volver{
+	position: relative;
+	z-index: 100;
 }

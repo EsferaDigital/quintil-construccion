@@ -8,11 +8,12 @@
 	background-color: color(cta);
 	padding: 0 1.5rem;
 	color: white;
-	border: transparent;
+	border: none;
 	//text-transform: uppercase;
 	//para redondeado perfecto darle la mitad de la altura
 	border-radius: 1.5rem;
 	font-size: .8rem;
+	cursor: pointer;
 	&:hover{
 		background-color: darken(color(cta),5);
 	}

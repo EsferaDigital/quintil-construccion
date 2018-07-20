@@ -1,0 +1,17 @@
+.c-gracias{
+	position: relative;
+	text-align: center;
+	border: 2px solid red;
+	& h1{
+		color: color(text);
+		font-size: 2rem;
+	}
+}
+
+.volver{
+	@include boton-ovalado;
+	display: inline-block;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-top: 1rem;
+}

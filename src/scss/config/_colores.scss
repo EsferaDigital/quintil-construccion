@@ -13,9 +13,10 @@
 // );
 
 $colors:(
+	text: #fff,
 	primary: hsl(192, 26%, 27%),
 	degradado-start: #00a398,
-	degradado-end:#2fac67,
+	degradado-end:hsl(147, 57%, 43%),
 	text-soft: hsl(147, 57%, 43%),
 	text-dark: hsl(0, 0%, 11%),
 	cascada-logo: hsl(242, 19%, 63%),

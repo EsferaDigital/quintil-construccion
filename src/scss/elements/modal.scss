@@ -1,13 +1,36 @@
 .modal{
 	position: fixed;
-	display: block;
+	display: flex;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	z-index: z-index(capa10);
 	transform: scale3d(0,0,0);
-	background-color: white;
-	opacity: .9;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;	
+	background-image: img('modal.jpg');
+	overflow-y: auto;
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 180vh;
+		background: linear-gradient(to right top, #00a398, #2fac67);
+		opacity: .4;
+		@include mq($movil1){
+			height: 140vh;
+		}
+		@include mq($movil2){
+			height: 135vh;
+		}
+		@include mq($small){
+			height: 100%;
+		}
+	
+	}
 	&.zoom-in{
 		animation: zoomIn .5s forwards;
 		@keyframes zoomIn{
@@ -27,7 +50,116 @@
 			}
 		}
 	}
-	& button{
-		@include boton-ovalado;
+	&-content{
+		position: relative;
+		width: 95%;
+		margin: auto;
+		// border: 2px solid red;
+		@include mq($large){
+			width: 85%;
+		}
+		@include mq($x-large){
+			width: 95%;
+		}
+		& h2{
+			text-align: center;
+			letter-spacing: 2px;
+			color: color(text);
+			font-size: 1.5rem;
+			padding: .5rem;
+		}
+		& p, li, a{
+			color: color(text);
+			letter-spacing: 2px;
+			padding: .5rem 0;
+			@include mq($large){
+				padding: .2rem 0;
+				font-size: 1.3rem;
+			}
+		}
+		& button{
+			position: relative;
+			left: 30%;
+			@include boton-ovalado;
+			line-height: 2.5;
+			margin-bottom: .5rem;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			@include mq($movil1){
+				left: 33%;
+			}
+			@include mq($small){
+				left: 37%;
+			}
+			@include mq($small-large){
+				left: 40%;
+			}
+			@include mq($medium){
+				left: 42%;
+			}
+			@include mq($large){
+				left: 45%;
+			}
+		}
 	}
+}
+
+
+
+// Modal errores
+
+.modal-errores{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	&-content{
+		width: 95%;
+		max-width: 400px;
+		margin: auto;
+		padding: 1rem;
+		background-color: white;
+		box-shadow: 0 0 15px rgba(0,0,0,0.5);
+		& h3{
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: 400;
+			&::after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #C5C5C5;
+				margin: 10px 0 15px;
+			}
+		}
+		& p{
+			color: #606060;
+			&::before{
+				content: "\65";
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				margin-right: .5rem;
+				font-family: 'quintil';
+				color: #E25151;
+			}
+		}
+	}
+}
+
+#btnClose{
+	@include boton-ovalado;
+	display: inline-block;
+	float: right;
+	font-size: 1rem;
+	line-height: 2;
+	border-radius: 1rem;
+	letter-spacing: 2px;
 }
