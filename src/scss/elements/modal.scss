@@ -74,11 +74,14 @@
 			&::after{
 				content: "";
 				display: block;
-				width: 30%;
+				width: 70%;
 				margin: 0 auto;
 				height: 1px;
 				background: color(degradado-start);
 				// margin: 10px 0 15px;
+				@include mq($medium){
+					width: 30%;
+				}
 			}
 		}
 		& p, li{
@@ -105,18 +108,20 @@
 	text-align: center;
 	// border: 2px solid red;
 	& a{
+		margin-top: 1rem;
 		float: right;
 		text-transform: uppercase;
 	}
 	& button{
 		@include boton-ovalado;
 		position: fixed;
-		color: black;
+		color: white;
+		font-size: 1.5rem;
 		font-family: sans-serif;
+		background-color: transparent;
 		text-transform: uppercase;
-		background-color: white;
-		top: 5%;
-		right: 5%;
+		top: 2%;
+		right: 1%;
 		&:hover{
 			background-color: darken(white, 5);
 		}
@@ -150,6 +155,7 @@
 			text-align: center;
 			letter-spacing: 2px;
 			font-size: 1.5rem;
+			text-transform: uppercase;
 			font-weight: 600;
 			&::after{
 				content: "";

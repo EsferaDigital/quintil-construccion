@@ -1,7 +1,11 @@
 .c-gracias{
 	position: relative;
 	text-align: center;
-	border: 2px solid red;
+	transform: translate3d(0,30%,0);
+	// border: 2px solid red;
+	@include mq($movil1){
+		transform: translate3d(0,50%,0);
+	}
 	& h1{
 		color: color(text);
 		font-size: 2rem;
@@ -13,5 +17,6 @@
 	display: inline-block;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	margin-top: 1rem;
+	font-weight: 600;
+	margin-top: 5rem;
 }

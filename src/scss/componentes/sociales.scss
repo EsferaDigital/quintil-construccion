@@ -16,20 +16,46 @@
 	& a{
 		color: color(text);
 		font-size: 1.3rem;
+		&:hover{
+			color: darken(color(degradado-end), 5);
+		}
 	}
 	& p{
 		color: color(text);
 		font-size: 1.3rem;
+		cursor: pointer;
+		&:hover{
+			color: darken(color(degradado-end), 5);
+		}
 		& span{
 			display: block;
 			width: 150px;
 			position: absolute;
 			padding: .5rem;
 			background-color: color(degradado-end);
+			transform: scale3d(0,0,0);
 			top: -70%;
 			right: 0;
 			color: color(text);
-			// display: none;
+			&.zoom-in{
+				animation: zoomIn .5s forwards;
+				@keyframes zoomIn{
+					to{
+						transform: scale3d(1,1,1);
+					}
+				}
+			}
+			&.zoom-out{
+				animation: zoomOut .5s forwards;
+				@keyframes zoomOut{
+					from{
+						transform: scale3d(1,1,1);
+					}
+					to{
+						transform: scale3d(0,0,0);
+					}
+				}
+			}
 		}
 	}
 }

@@ -310,10 +310,13 @@ body {
       .modal-content h2::after {
         content: "";
         display: block;
-        width: 30%;
+        width: 70%;
         margin: 0 auto;
         height: 1px;
         background: #00a398; }
+        @media screen and (min-width: 768px) {
+          .modal-content h2::after {
+            width: 30%; } }
     .modal-content p, .modal-content li {
       color: #fff;
       letter-spacing: 2px;
@@ -333,6 +336,7 @@ body {
   position: relative;
   text-align: center; }
   .c-enterate a {
+    margin-top: 1rem;
     float: right;
     text-transform: uppercase; }
   .c-enterate button {
@@ -346,12 +350,13 @@ body {
     font-size: .8rem;
     cursor: pointer;
     position: fixed;
-    color: black;
+    color: white;
+    font-size: 1.5rem;
     font-family: sans-serif;
+    background-color: transparent;
     text-transform: uppercase;
-    background-color: white;
-    top: 5%;
-    right: 5%; }
+    top: 2%;
+    right: 1%; }
     .c-enterate button:hover {
       background-color: #2a985b; }
     .c-enterate button:active {
@@ -389,6 +394,7 @@ body {
       text-align: center;
       letter-spacing: 2px;
       font-size: 1.5rem;
+      text-transform: uppercase;
       font-weight: 600; }
       .modal-errores-content h3::after {
         content: "";
@@ -433,7 +439,8 @@ body {
 
 .c-header {
   display: block;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 10%;
           flex: 0 1 10%;
@@ -441,6 +448,9 @@ body {
   @media screen and (min-width: 360px) {
     .c-header {
       margin-top: .5rem; } }
+  @media screen and (min-width: 768px) {
+    .c-header {
+      margin-top: 4rem; } }
   @media screen and (min-width: 1024px) {
     .c-header {
       width: 50%;
@@ -660,18 +670,44 @@ button[type="submit"] {
   .c-sociales a {
     color: #fff;
     font-size: 1.3rem; }
+    .c-sociales a:hover {
+      color: #2a985b; }
   .c-sociales p {
     color: #fff;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    cursor: pointer; }
+    .c-sociales p:hover {
+      color: #2a985b; }
     .c-sociales p span {
       display: block;
       width: 150px;
       position: absolute;
       padding: .5rem;
       background-color: #2fac67;
+      -webkit-transform: scale3d(0, 0, 0);
+              transform: scale3d(0, 0, 0);
       top: -70%;
       right: 0;
       color: #fff; }
+      .c-sociales p span.zoom-in {
+        -webkit-animation: zoomIn .5s forwards;
+                animation: zoomIn .5s forwards; }
+
+@keyframes zoomIn {
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+      .c-sociales p span.zoom-out {
+        -webkit-animation: zoomOut .5s forwards;
+                animation: zoomOut .5s forwards; }
+
+@keyframes zoomOut {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  to {
+    -webkit-transform: scale3d(0, 0, 0);
+            transform: scale3d(0, 0, 0); } }
 
 .c-footer {
   position: fixed;
@@ -699,7 +735,12 @@ button[type="submit"] {
 .c-gracias {
   position: relative;
   text-align: center;
-  border: 2px solid red; }
+  -webkit-transform: translate3d(0, 30%, 0);
+          transform: translate3d(0, 30%, 0); }
+  @media screen and (min-width: 360px) {
+    .c-gracias {
+      -webkit-transform: translate3d(0, 50%, 0);
+              transform: translate3d(0, 50%, 0); } }
   .c-gracias h1 {
     color: #fff;
     font-size: 2rem; }
@@ -717,7 +758,8 @@ button[type="submit"] {
   display: inline-block;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 1rem; }
+  font-weight: 600;
+  margin-top: 5rem; }
   .volver:hover {
     background-color: #2a985b; }
   .volver:active {

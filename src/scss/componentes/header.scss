@@ -1,11 +1,15 @@
 .c-header{
 	display: block;
-	width: 100%;
+	width: 95%;
+	margin: 0 auto;
 	flex: 0 1 10%;
 	height: auto;
 	// border: 2px solid blue;
 	@include mq($movil1){
 		margin-top: .5rem;
+	}
+	@include mq($medium){
+		margin-top: 4rem;
 	}
 	@include mq($large){
 		width: 50%;
