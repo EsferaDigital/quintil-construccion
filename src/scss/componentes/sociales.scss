@@ -1,0 +1,35 @@
+.c-sociales{
+	position: relative;
+	display: flex;
+	width: 50%;
+	flex: 1 0 10%;
+	max-width: 200px;
+	margin: 0 auto;
+	margin-top: 2rem;
+	justify-content: space-between;
+	@include mq($movil1){
+		margin-top: 7rem;
+	}
+	@include mq($large){
+		margin-top: 4rem;
+	}
+	& a{
+		color: color(text);
+		font-size: 1.3rem;
+	}
+	& p{
+		color: color(text);
+		font-size: 1.3rem;
+		& span{
+			display: block;
+			width: 150px;
+			position: absolute;
+			padding: .5rem;
+			background-color: color(degradado-end);
+			top: -70%;
+			right: 0;
+			color: color(text);
+			// display: none;
+		}
+	}
+}

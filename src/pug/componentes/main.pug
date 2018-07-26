@@ -1,40 +1,9 @@
-main.c-main
-	.c-contador#clock
-	.c-subtitle
-		p Este tiempo queda para el estreno de nuestra web
-	form(action="enviar.php" id="formulario" name="formulario" method="post")
-		input(type="text" name="email" placeholder="Ingresa tu correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
-		i(class="icon-check" aria-hidden="true")
-		input(type="submit" id="btnSend" name="btn" value="Notifícame")
-	.c-contacto
-		p(class="icon-mail"): span contacto@quintilvalley.cl 
-		p(class="icon-whatsapp"): span +56 9 1234567
-	.c-enterate
-		p Entérate de lo que estamos haciendo
-		a(href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank") Blog
-	.c-sociales
-		a(class="icon-facebook" href="https://www.facebook.com/Quintil-Valley-376446842846566/?ref=br_rs" target="_blank")
-		a(class="icon-twitter" href="https://twitter.com/ValleyQuintil" target="_blank")
-		a(class="icon-instagram" href="https://instagram.com/quintil_valley" target="_blank")
-	.c-boton
-		button#open-modal Nosotros
-	section#modal.modal
-		.modal-content
-			h2 Somos
-			p Tejedores de redes para la innovación y emprendimiento de alto impacto 
-			p Nuestra empresa se especializa en el diseño y operación de estructuras y programas para la generación de nuevos negocios y emprendimientos, basados en conocimiento, tecnología e innovación.
-			h2 Trabajamos
-			p Inmersos en el ecosistema global de innovación y emprendimiento, apoyamos su desarrollo y articulamos su crecimiento.
-			p Asistimos a empresas, universidades, gobiernos, emprendedores y otro tipo de organizaciones, para que aceleren y fortalezcan sus procesos de innovación.
-			p Contamos con una red global de apoyo de especialistas para la ejecución de cada uno de nuestros programas, entregando así la mejor experiencia a nuestros clientes y aliados.
-			h2 Lo nuestro es... 
-			ul
-				li Desarrollo y ejecución de programas de innovación abierta
-				li Fortalecimiento de cartera y proyectos de innovación de empresas y emprendedores
-				li Estudios y acciones de desarrollo de ecosistemas de innovación y emprendimiento
-				li Apoyo al desarrollo de ecosistemas de emprendimiento e innovación universitarios
-				li Programas de capacitación en innovación y emprendimiento
-			.c-enterate
-				p Entérate de lo que estamos haciendo
-				a(href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank") Blog
-			button#close.icon-close Cerrar
+.c-main
+	section.c-contador
+		.c-contador-countdown#clock
+		h2 ...Para el estreno de nuestra web
+	include ./form
+	include ./botones
+include ./sociales
+include ./modal
+	

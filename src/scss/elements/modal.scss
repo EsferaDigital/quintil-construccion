@@ -1,6 +1,7 @@
 .modal{
 	position: fixed;
 	display: flex;
+	flex-wrap: wrap;
 	top: 0;
 	width: 100%;
 	height: 100%;
@@ -18,8 +19,8 @@
 		left: 0;
 		width: 100%;
 		height: 180vh;
-		background: linear-gradient(to right top, #00a398, #2fac67);
-		opacity: .4;
+		background-color: rgb(48, 47, 47);
+		opacity: .7;
 		@include mq($movil1){
 			height: 140vh;
 		}
@@ -63,44 +64,63 @@
 		}
 		& h2{
 			text-align: center;
-			letter-spacing: 2px;
+			letter-spacing: 2.5px;
 			color: color(text);
 			font-size: 1.5rem;
 			padding: .5rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-top: 1rem;
+			&::after{
+				content: "";
+				display: block;
+				width: 30%;
+				margin: 0 auto;
+				height: 1px;
+				background: color(degradado-start);
+				// margin: 10px 0 15px;
+			}
 		}
-		& p, li, a{
+		& p, li{
 			color: color(text);
 			letter-spacing: 2px;
 			padding: .5rem 0;
+			font-weight: 600;
 			@include mq($large){
 				padding: .2rem 0;
 				font-size: 1.3rem;
 			}
 		}
-		& button{
-			position: relative;
-			left: 30%;
-			@include boton-ovalado;
-			line-height: 2.5;
-			margin-bottom: .5rem;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			@include mq($movil1){
-				left: 33%;
-			}
-			@include mq($small){
-				left: 37%;
-			}
-			@include mq($small-large){
-				left: 40%;
-			}
-			@include mq($medium){
-				left: 42%;
-			}
-			@include mq($large){
-				left: 45%;
-			}
+		& li{
+			list-style: disc;
+			list-style-position: inside;
 		}
+	}
+}
+
+.c-enterate{
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	// border: 2px solid red;
+	& a{
+		float: right;
+		text-transform: uppercase;
+	}
+	& button{
+		@include boton-ovalado;
+		position: fixed;
+		color: black;
+		font-family: sans-serif;
+		text-transform: uppercase;
+		background-color: white;
+		top: 5%;
+		right: 5%;
+		&:hover{
+			background-color: darken(white, 5);
+		}
+		
 	}
 }
 
@@ -128,8 +148,9 @@
 		box-shadow: 0 0 15px rgba(0,0,0,0.5);
 		& h3{
 			text-align: center;
+			letter-spacing: 2px;
 			font-size: 1.5rem;
-			font-weight: 400;
+			font-weight: 600;
 			&::after{
 				content: "";
 				display: block;
@@ -141,6 +162,7 @@
 		}
 		& p{
 			color: #606060;
+			letter-spacing: 2px;
 			&::before{
 				content: "\65";
 				display: inline-block;

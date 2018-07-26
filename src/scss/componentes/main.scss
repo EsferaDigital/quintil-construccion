@@ -1,19 +1,55 @@
-.c-subtitle{
+.c-main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1 1 80%;
+	// border: 4px solid yellow;
 	@include mq($movil1){
-		padding: 0 1rem;
+		flex: 1 1 70%;
 	}
-	& p{
-		font-size: 1rem;
-		letter-spacing: 2px;		
+}
+
+.c-contador{
+	display: block;
+	text-align: center;
+	// border: 2px solid green;
+	&-countdown{
+		display: flex;
+		justify-content: center;
+		color: white;
+		font-weight: 600;
+	}
+	& h2{
+		font-size: 1rem; 
 		color: color(text);
-		@include mq($small-large){
+		letter-spacing: 2px;
+		@include mq($movil1){
+			margin-top: .5rem;
+		}
+		@include mq($medium){
+			font-size: 1.2rem;
+			margin-top: 1rem;
+		}
+		@include mq($large){
+			margin-top: 1rem;
 			font-size: 1.3rem;
 		}
 	}
 }
 
+//Diseño del countdown
+
 .c-time{
+	text-align: center;
 	color: color(text);
+	padding: .5rem;
+	// border: 2px solid red;
+	@include mq($medium){
+		margin: 0 1rem;
+	}
+	@include mq($large){
+		margin: 0 1rem;
+	}
 	&-number{
 		font-size: 1.7rem;
 		letter-spacing: 2px;
@@ -22,139 +58,10 @@
 		}
 	}
 	&-text{
-		font-size: 1rem;
+		font-size: .8rem;
 		letter-spacing: 2px;
 		@include mq($small-large){
 			font-size: 1.3rem;
 		}
 	}
-}
-
-form{
-	padding: 0 .5rem;
-	// border: 2px solid red;
-	@include mq($movil1){
-		padding: 0 1rem;
-	}
-}
-
-input[type="text"]{
-	width: 60%;
-	line-height: 2;
-	padding: 0 1rem;
-	border: transparent;
-	letter-spacing: 2px;
-	border-radius: 1rem 0 0 1rem;
-	@include mq($movil1){
-		width: 65%;
-	}
-	&:focus{
-		border: color(degradado-start);
-	}
-}
-
-input[type="submit"]{
-	@include boton-ovalado;
-	width: 40%;
-	position: relative;
-	line-height: 2;
-	letter-spacing: 2px;
-	padding: 0 .2rem 0 .5rem;
-	background-color: color(cta);
-	color: white;
-	border: none;
-	border-radius: 0 1rem 1rem 0;
-	@include mq($movil1){
-		width: 35%;
-	}
-	@include mq($large){
-		text-transform: uppercase;
-	}
-}
-
-i{
-	position: absolute;
-	top: 5px;
-	color: white;
-	font-size: 1rem;
-	left: 61%;
-	z-index: 2;
-	@include mq($movil1){
-		left: 65%;
-	}
-	@include mq($small-large){
-		left: 66%;
-	}
-	@include mq($large){
-		left: 68%;
-	}
-}
-
-.c-contacto{
-	color: white;
-	& p{
-		flex: 0 0 100%;
-		font-size: 1rem;
-		letter-spacing: 2px;
-		@include mq($medium){
-			flex: 0 0 42%;
-			font-size: 1.2rem;
-			// border: 2px solid green;
-		}
-	}
-	& p:nth-child(2){
-		@include mq($medium){
-			text-align: right;
-		}
-	}
-}
-
-.c-enterate{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	& p{
-		color: color(text);
-		letter-spacing: 2px;
-	}
-	& a{
-		margin-left: .5rem;
-		letter-spacing: 2px;
-		color: color(text);
-		&:hover{
-			color: color(cta);
-		}
-	}
-}
-
-.c-sociales{
-	& a{
-		font-size: 1.5rem;
-		color: white;
-		transition: opacity .5s ease;
-		&:hover{
-			color: black;
-			opacity: .7;
-		}
-	}
-}
-
-.c-boton{
-	& button{
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		@include boton-ovalado;
-		line-height: 2.5;
-	}
-}
-
-
-
-.c-gracias h1{
-	color: black;
-}
-
-#volver{
-	position: relative;
-	z-index: 100;
 }

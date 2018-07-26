@@ -10,29 +10,25 @@
     <link rel="stylesheet" href="css/icons.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <body class="c-body" id="body">
-      <header class="c-header">
-        <h1 class="zoom-in"><img class="c-header-img" src="./img/quintil.png" alt="Quintil Valley"/></h1>
-        <p class="c-header-subtitle"> Innovando para crear y sorprender</p>
-      </header>
-      <main class="c-main">
-        <div class="c-contador" id="clock"></div>
-        <div class="c-subtitle">
-          <p>Este tiempo queda para el estreno de nuestra web</p>
+      <main class="c-layout">
+        <header class="c-header"><img class="c-header-img" src="./img/quintil.png" alt="Quintil Valley"/>
+          <h1 class="c-header-subtitle"> Innovando para crear y sorprender</h1>
+        </header>
+        <div class="c-main">
+          <section class="c-contador">
+            <div class="c-contador-countdown" id="clock"></div>
+            <h2>...Para el estreno de nuestra web</h2>
+          </section>
+          <form action="enviar.php" id="formulario" name="formulario" method="post">
+            <input type="text" name="email" placeholder="Ingresa tu correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"/>
+            <button class="icon-check" type="submit" id="btnSend">Notifícame</button>
+          </form>
+          <div class="c-botones">
+            <button class="boton" id="open-modal">Nosotros</button><a class="boton" href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank">Blog</a>
+          </div>
         </div>
-        <form action="enviar.php" id="formulario" name="formulario" method="post">
-          <input type="text" name="email" placeholder="Ingresa tu correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"/><i class="icon-check" aria-hidden="true"></i>
-          <input type="submit" id="btnSend" name="btn" value="Notifícame"/>
-        </form>
-        <div class="c-contacto">
-          <p class="icon-mail"><span>contacto@quintilvalley.cl </span></p>
+        <div class="c-sociales"><a class="icon-facebook" href="https://www.facebook.com/Quintil-Valley-376446842846566/?ref=br_rs" target="_blank"></a><a class="icon-twitter" href="https://twitter.com/ValleyQuintil" target="_blank"></a><a class="icon-instagram" href="https://instagram.com/quintil_valley" target="_blank"></a>
           <p class="icon-whatsapp"><span>+56 9 1234567</span></p>
-        </div>
-        <div class="c-enterate">
-          <p>Entérate de lo que estamos haciendo</p><a href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank">Blog</a>
-        </div>
-        <div class="c-sociales"><a class="icon-facebook" href="https://www.facebook.com/Quintil-Valley-376446842846566/?ref=br_rs" target="_blank"></a><a class="icon-twitter" href="https://twitter.com/ValleyQuintil" target="_blank"></a><a class="icon-instagram" href="https://instagram.com/quintil_valley" target="_blank"></a></div>
-        <div class="c-boton">
-          <button id="open-modal">Nosotros</button>
         </div>
         <section class="modal" id="modal">
           <div class="modal-content">
@@ -51,17 +47,16 @@
               <li>Apoyo al desarrollo de ecosistemas de emprendimiento e innovación universitarios</li>
               <li>Programas de capacitación en innovación y emprendimiento</li>
             </ul>
-            <div class="c-enterate">
-              <p>Entérate de lo que estamos haciendo</p><a href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank">Blog</a>
-            </div>
+          </div>
+          <div class="c-enterate"><a class="boton" href="https://innovacionabiertaantofagasta.cl/blog/" target="_blank">Blog</a>
             <button class="icon-close" id="close">Cerrar</button>
           </div>
         </section>
+        <footer class="c-footer">
+          <p>Diseñado por</p><a href="https://esferadigital.cl" target="_blank">Esfera Digital</a>
+        </footer>
+        <script src="js/all.min.js"></script>
       </main>
-      <footer class="c-footer">
-        <p>Diseñado por</p><a href="https://esferadigital.cl" target="_blank">Esfera Digital</a>
-      </footer>
-      <script src="js/all.min.js"></script>
     </body>
   </head>
 </html>

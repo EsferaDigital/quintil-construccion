@@ -11,7 +11,7 @@ function validar(e) {
 		errores += '<p>Escriba un correo</p>';
 		let mensajeErrores = `
 				<div class="modal-errores-content">
-					<h3>Errores encontrados</h3>
+					<h3>Error</h3>
 					${errores}
 					<span id="btnClose">Cerrar</span>
 				</div>

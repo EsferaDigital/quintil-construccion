@@ -1,4 +1,28 @@
 .c-header{
+	display: block;
+	width: 100%;
+	flex: 0 1 10%;
+	height: auto;
+	// border: 2px solid blue;
+	@include mq($movil1){
+		margin-top: .5rem;
+	}
+	@include mq($large){
+		width: 50%;
+		margin: 0 auto;
+	}
+	&-img{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		// border: 2px solid red;
+		@include mq($movil1){
+			width: 70%;
+		}
+		@include mq($medium){
+			width: 50%;
+		}
+	}
 	&-subtitle{
 		display: block;
 		width: 100%;
@@ -6,17 +30,15 @@
 		color: color(text);
 		font-size: 1.2rem;
 		letter-spacing: 2px;
-		@include mq($large){
-			font-size: 1.5rem;
-		}
-	}
-	&-img{
-		display: block;
-		width: 100%;
-		// border: 2px solid red;
+		font-weight: 600;
 		@include mq($medium){
-			width: 70%;
-			margin: auto;
+			margin-top: 1rem;
+			font-size: 1.4rem;
+			text-transform: uppercase;
+		}
+		@include mq($large){
+			font-size: 1.3rem;
+			text-transform: uppercase;
 		}
 	}
 }

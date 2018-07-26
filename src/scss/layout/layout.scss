@@ -1,6 +1,7 @@
 .c-body{
 	display: flex;
-	height: 100vh;
+	width: 100%;
+	height: auto;
 	position: relative;
 	flex-direction: column;
 	background-size: cover;
@@ -14,131 +15,17 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to right top, #00a398, #2fac67);
-		opacity: .4;
+		background-color: rgb(48, 47, 47);
+		// background: linear-gradient(to right top, #00a398, #2fac67);
+		opacity: .5;
 	}
 }
 
-.c-header{
-	display: flex;
+.c-layout{
 	position: relative;
-	flex: 1 1 30%;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	// border: 2px solid blue;
-	@include mq($movil2){
-		flex: 1 1 20%
-	}
-	& h1{
-		flex: 0 0 60%;
-		margin-top: 1rem;
-		text-align: center;
-		// border: 2px solid green;
-		@include mq($small){
-			flex: 0 0 50%;
-		}
-		@include mq($large){
-			flex: 0 0 35%;
-		}
-	}
-}
-
-.c-main{
 	display: flex;
-	position: relative;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	flex: 1 1 65%;
-	// border: 2px solid yellow;
-	@include mq($movil2){
-		flex: 1 1 75%;
-		width: 90%;
-		margin: 0 auto;
-	}
-	@include mq($small){
-		width: 80%;
-	}
-	@include mq($small-large){
-		flex: 1 1 55%;
-		width: 70%;
-	}
-	@include mq($large){
-		width: 60%; 
-		margin-top: 2rem;
-	}
-	@include mq($x-large){
-		margin-top: 2.5rem;
-	}
-}
-
-.c-subtitle, .c-contador, form, .c-contacto, .c-sociales, .c-boton, .c-enterate{
-	position: relative;
-	text-align: center;
-	flex: 1 1 100%;
-	margin-bottom: 1rem;
-	// border: 2px solid red;
-}
-
-.c-contador{
-	display: flex;
-	flex: 0 0 80%;
-	margin: auto;
-	margin-bottom: 1rem;
-	justify-content: space-between;
-	@include mq($large){
-		flex: 0 0 60%;
-	}
-}
-
-.c-subtitle{
-	padding: 0 .5rem;
-}
-
-form{
-	display: flex;
-	justify-content: center;
-	@include mq($medium){
-		flex: 0 0 80%;
-	}
-	@include mq($large){
-		flex: 0 0 65%;
-	}
-	@include mq($x-large){
-		flex: 0 0 60%;
-	}
-}
-
-.c-contacto{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: space-between;
-	@include mq($medium){
-		flex: 0 0 80%;
-	}
-	@include mq($large){
-		flex: 0 0 65%;
-	}
-	@include mq($x-large){
-		flex: 0 0 60%;
-	}
-}
-
-.c-boton{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-.c-footer{
-	display: flex;
-	position: relative;
-	align-items: flex-end;
-	justify-content: center;
-	flex: 1 1 5%;
-	// border: 2px solid green;
+	flex-direction: column;
+	// border: 4px solid blue;
+	height: auto;
+	min-height: 100vh;
 }
