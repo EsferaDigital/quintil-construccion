@@ -32,7 +32,7 @@ gulp.task('pug2html', function buildHTML() {
 			pretty: true
 		}))
 		.pipe(gulpPugBeautify({ omit_empty: true }))
-		//.pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
+		.pipe(htmlmin({ collapseWhitespace: true })) //Activar para minificar
 		.pipe(gulp.dest('./public/'))
 })
 
@@ -45,7 +45,7 @@ gulp.task('sass', function () {
 		.pipe(gulpsass())
 		.pipe(autoprefixer('last 2 versions'))
 		.pipe(gulp.dest('./public/css'))
-		//.pipe(cleanCss({ keepSpecialComments: 1 }))
+		.pipe(cleanCss({ keepSpecialComments: 1 }))
 		// Escribir los sourcemaps
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./public/css'))

@@ -11,12 +11,12 @@
   }
 
   // ejemplo de uso
-  .button-ej{
-    @include button-ejemplo(3,1rem);
-    &-small{
-      @include button-ejemplo(2.5,0.8rem);
-    }
-  }
+  // .button-ej{
+  //   @include button-ejemplo(3,1rem);
+  //   &-small{
+  //     @include button-ejemplo(2.5,0.8rem);
+  //   }
+  // }
 
   // Mixin con selectores adentro
 
@@ -31,9 +31,9 @@
 
   // ejemplo de uso
 
-  .nada{
-    @include nada(1em,Arial,blue);
-  }
+  // .nada{
+  //   @include nada(1em,Arial,blue);
+  // }
 
   // Mixin con múltiples argumentos
 
@@ -43,9 +43,9 @@
 
   // ejemplo de uso
 
-  .box{
-    @include multiple(1px solid red, 2px solid blue, 5px solid white);
-  }
+  // .box{
+  //   @include multiple(1px solid red, 2px solid blue, 5px solid white);
+  // }
 
   //Sombras
 
@@ -74,25 +74,25 @@
 
   
 
-  .sombra-concava{
-    position: relative;
-    &:after,
-    &:before{
-      content: "";
-      position: absolute;
-      width: 96%;
-      height: 5%;
-      bottom: 3%;
-      z-index: -1;
-      background-color: #000;
-      box-shadow: 0 5px 12px black;
-    }
-    &:before{
-      left: 1%;
-      transform: rotate(-2deg);
-    }
-    &:after{
-      right: 1%;
-      transform: rotate(2deg);
-    }
-  }
+  // .sombra-concava{
+  //   position: relative;
+  //   &:after,
+  //   &:before{
+  //     content: "";
+  //     position: absolute;
+  //     width: 96%;
+  //     height: 5%;
+  //     bottom: 3%;
+  //     z-index: -1;
+  //     background-color: #000;
+  //     box-shadow: 0 5px 12px black;
+  //   }
+  //   &:before{
+  //     left: 1%;
+  //     transform: rotate(-2deg);
+  //   }
+  //   &:after{
+  //     right: 1%;
+  //     transform: rotate(2deg);
+  //   }
+  // }
